@@ -1,4 +1,4 @@
-const largestPrimeFactor = function () {
+const largestPalindromeProduct = function () {
     let factor = 600851475143;
     let second;
     let candidate;
@@ -25,4 +25,4 @@ const largestPrimeFactor = function () {
         }
     }
 
-    console.log(largestPrimeFactor());
+    console.log(largestPalindromeProduct);
