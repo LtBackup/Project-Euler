@@ -8,7 +8,7 @@ const largestPalindromeProduct = function () {
     for (let factor1 = 999; factor1 > 0; factor1--){
         for(let factor2 = 999; factor2 > 0; factor2--){
             candidate = factor1 * factor2;
-            if(candidate.toString() === candidate.split("").reverse().join("")){
+            if(candidate.toString() === candidate.toString().split("").reverse().join("")){
                 if(candidate > palindrome){
                     palindrome = candidate;
                 }
@@ -18,7 +18,7 @@ const largestPalindromeProduct = function () {
     return palindrome;
 }
 
-console.log(largestPalindromeProduct);
+console.log(largestPalindromeProduct());
 
     //max factor 998001
     //first palindrome 989989
