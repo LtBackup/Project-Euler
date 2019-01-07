@@ -1,28 +1,25 @@
 const largestPalindromeProduct = function () {
-    let factor = 600851475143;
-    let second;
-    let candidate;
+    let palindrome = 100001;
+    let candidate = 0;
+    let candidateStr;
+    let reverseStr;
 
-    for (let first = 3; first < factor - 1; first += 2) {
-        second = factor / first;
-        if (second % 1 === 0) {
-            if (isPrime(second)) {
-                return second;
-            }
-        }
-    }
-}
-
-    const isPrime = function (candidate) {
-        let result = false
-        if (candidate % 2 !== 0) {
-            for (let i = candidate - 1; i > 1; i--) {
-                if (candidate % i === 0) {
-                    return false;
+    //Will not scale!
+    for (let factor1 = 999; factor1 > 0; factor1--){
+        for(let factor2 = 999; factor2 > 0; factor2--){
+            candidate = factor1 * factor2;
+            if(candidate.toString() === candidate.split("").reverse().join("")){
+                if(candidate > palindrome){
+                    palindrome = candidate;
                 }
             }
-            return true;
         }
     }
+    return palindrome;
+}
 
-    console.log(largestPalindromeProduct);
+console.log(largestPalindromeProduct);
+
+    //max factor 998001
+    //first palindrome 989989
+    //assuming we get into 6 digits, first possible palindrome factor is 100001

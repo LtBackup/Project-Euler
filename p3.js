@@ -14,7 +14,7 @@ const largestPrimeFactor = function () {
 }
 
     const isPrime = function (candidate) {
-        let result = false
+        let result = false;
         if (candidate % 2 !== 0) {
             for (let i = candidate - 1; i > 1; i--) {
                 if (candidate % i === 0) {
