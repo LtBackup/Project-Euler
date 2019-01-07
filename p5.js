@@ -10,8 +10,8 @@ const productDivisibleUpTo20 = function () {
             testValue += starterFactor;
         }
     }
+}
 
 console.log(productDivisibleUpTo20());
 
     //only need to multiply primes since everything else is divisible by something smaller than it.
-    //add primes up until one works
